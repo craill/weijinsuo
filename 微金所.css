@@ -1,0 +1,196 @@
+a {
+  color: #666;
+  text-decoration: none;
+}
+.header {
+  border-bottom: 1px solid #ccc;
+}
+.header .container .row > div {
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+}
+.header .container .row > div a:hover {
+  text-decoration: none;
+}
+.header .container .row > div ~ div {
+  border-left: 1px solid #ccc;
+}
+.header .container .row > div .icon-link img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  display: none;
+}
+.header .container .row > div .icon-link:hover img {
+  display: block;
+  z-index: 999;
+}
+.navbar {
+  background-color: #fff;
+  margin-bottom: 0;
+}
+.navbar .container .navbar-header .navbar-toggle {
+  margin-top: 23px;
+}
+.navbar .container .navbar-header .navbar-brand {
+  height: 80px;
+  line-height: 50px;
+}
+.navbar .container .navbar-header .navbar-brand .icon-icon {
+  color: #e92322;
+  font-size: 30px;
+}
+.navbar .container .navbar-header .navbar-brand .icon-logo {
+  color: #666;
+  font-size: 30px;
+}
+.navbar .container .navbar-collapse .navbar-nav li a {
+  height: 80px;
+  line-height: 50px;
+}
+.navbar .container .navbar-collapse .navbar-nav li:hover a {
+  border-bottom: 2px solid #e92322;
+}
+.navbar .container .navbar-collapse .navbar-nav li.active > a {
+  background-color: #fff;
+  border-bottom: 2px solid #e92322;
+}
+.sliders #carousel-example-generic .carousel-inner .item div {
+  width: 100%;
+  height: 410px;
+  background-position: center center;
+}
+.sliders #carousel-example-generic .carousel-inner .item img {
+  width: 100%;
+}
+.features {
+  margin-top: 20px;
+}
+.features .container .row .media {
+  margin-top: 20px;
+}
+.features .container .row .media a:hover {
+  color: #e92322;
+  text-decoration: none;
+}
+.booking {
+  border-top: 1px solid #666;
+  border-bottom: 1px solid #666;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.booking .text-danger {
+  color: #e92322;
+}
+.booking a:hover {
+  color: #e92322;
+  text-decoration: none;
+  cursor: pointer;
+}
+.products {
+  background-color: #f5f5f5;
+  padding-bottom: 20px;
+}
+.products .container .nav-tabs {
+  margin-top: 30px;
+}
+.products .container .nav-tabs li a {
+  font-size: 18px;
+}
+.products .container .nav-tabs li a.hover {
+  background-color: #f5f5f5;
+}
+.products .container .nav-tabs li.active a {
+  background-color: #f5f5f5;
+  border: 1px solid #f5f5f5;
+  border-bottom: 2px solid #e92322;
+}
+.products .container .tab-content .tab-pane > .row .product {
+  margin-top: 20px;
+  display: flex;
+  background-color: #fff;
+  height: 160px;
+}
+.products .container .tab-content .tab-pane > .row .product.active {
+  color: #fff;
+  background-color: #e92322;
+}
+.products .container .tab-content .tab-pane > .row .product .left {
+  flex: 1;
+  border-right: 1px dashed #ccc;
+  padding: 15px;
+}
+.products .container .tab-content .tab-pane > .row .product .left h4 {
+  text-align: center;
+}
+.products .container .tab-content .tab-pane > .row .product .left > .row div p {
+  margin-bottom: 0;
+}
+.products .container .tab-content .tab-pane > .row .product .left > .row div:nth-child(2n) p {
+  text-align: right;
+}
+.products .container .tab-content .tab-pane > .row .product .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+.products .container .tab-content .tab-pane > .row .product .right p span {
+  font-size: 40px;
+}
+.products .container .tab-content .tab-pane > .row .product .right .tips {
+  top: 10px;
+}
+.products .container .tab-content .tab-pane > .row .product .right .tips button {
+  position: absolute;
+}
+.products .container .tab-content .tab-pane > .row .product .right .tips button:first-child {
+  border: 1px solid gold;
+  color: pink;
+}
+.products .container .tab-content .tab-pane > .row .product .right .tips button:last-of-type {
+  color: #e92322;
+}
+.news {
+  margin-top: 20px;
+}
+.news .container .row h4 {
+  border-bottom: 1px dashed #000;
+  padding: 15px;
+}
+.news .container .row .title .nav-tabs li {
+  padding-bottom: 20px;
+}
+.news .container .row .title .nav-tabs li.active a {
+  background-color: #e92322;
+}
+.news .container .row .title .nav-tabs li a {
+  border: none;
+  border-radius: 50%;
+}
+.news .container .row .title .nav-tabs li a:hover {
+  background-color: #e92322;
+}
+.news .container .row .title .nav-tabs li i {
+  font-size: 30px;
+  color: #ccc;
+}
+.news .container .row .tab-content .tab-pane ul {
+  padding-left: 40px;
+}
+.news .container .row .tab-content .tab-pane ul li a {
+  line-height: 40px;
+  color: #666;
+}
+.partners .container .row a {
+  display: block;
+}
+.partners .container .row a i {
+  font-size: 60px;
+}
+.partners .container .row a i:hover {
+  color: #e92322;
+}

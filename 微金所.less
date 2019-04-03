@@ -1,0 +1,307 @@
+   a {
+       color: #666;
+       text-decoration: none;
+   }
+
+   @maincolor: #e92322;
+
+   .header {
+       border-bottom: 1px solid #ccc;
+
+       .container {
+           .row {
+               >div {
+                   height: 40px;
+                   line-height: 40px;
+                   font-size: 12px;
+                        a:hover {
+                           text-decoration: none;
+                        }
+                   &~div {
+                       border-left: 1px solid #ccc;
+                   }
+
+                   .icon-link {
+
+
+                       img {
+                           position: absolute;
+                           left: 50%;
+                           transform: translateX(-50%);
+                           top: 40px;
+                           display: none;
+                       }
+
+                       &:hover {
+                           img {
+                               display: block;
+                               z-index: 999;
+                           }
+                       }
+                   }
+               }
+           }
+       }
+   }
+
+   .navbar {
+       background-color: #fff;
+      margin-bottom: 0;
+       .container {
+           .navbar-header {
+              .navbar-toggle {
+               margin-top: 23px;
+              }
+               .navbar-brand {
+                   height: 80px;
+                   line-height: 50px;
+
+                   .icon-icon {
+                       color: @maincolor;
+                       font-size: 30px;
+                   }
+
+                   .icon-logo {
+                       color: #666;
+                       font-size: 30px;
+                   }
+               }
+           }
+
+           .navbar-collapse {
+               .navbar-nav {
+                   li {
+                      a {
+                           height: 80px;
+                           line-height: 50px;
+                       }
+                       &:hover {
+                          a {
+                             border-bottom: 2px solid @maincolor;
+                          }
+                           
+                       }
+
+                       &.active {
+                           >a {
+                               background-color: #fff;
+                               border-bottom: 2px solid @maincolor;
+                           }
+                       }
+
+                       
+                   }
+
+               }
+           }
+       }
+   }
+
+
+   .sliders {
+      #carousel-example-generic {
+         .carousel-inner {
+            .item {
+               div {
+                  width: 100%;
+                  height: 410px;
+                  background-position: center center;
+               }
+               img {
+                  width: 100%;
+               }
+            }
+         }
+      }
+   }
+   // features 
+   .features {
+      margin-top: 20px;
+      .container {
+         .row {
+            .media {
+               margin-top: 20px;
+               a {
+                  &:hover {
+                     color: @maincolor;
+                     text-decoration: none;
+                  }
+               }
+            }
+         }
+      }
+   }
+   //预约
+
+   .booking {
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666;
+      padding-top: 20px;
+      padding-bottom: 20px;
+     
+      .text-danger {
+        color: @maincolor;
+    }
+    a:hover {
+            color: @maincolor;
+            text-decoration: none;
+            cursor: pointer;
+    }
+   }
+//    产品
+.products {
+    background-color: #f5f5f5;
+    padding-bottom: 20px;
+    .container {
+     
+            .nav-tabs {
+                margin-top: 30px;;
+                li {
+                        a {
+                            // border:1px solid #f5f5f5;
+                            font-size: 18px;
+                            &.hover {
+                                background-color: #f5f5f5;
+                            }
+                        }
+                    &.active {
+                        a {
+                             background-color: #f5f5f5;
+                              border:1px solid #f5f5f5;
+                              border-bottom:2px solid @maincolor    ;
+                        }
+                       
+                    }
+                }
+            }
+            .tab-content {
+                .tab-pane {
+                    >.row {
+                        .product {
+                            margin-top: 20px;
+                            display: flex;
+                            background-color: #fff;
+                            height: 160px;
+                            &.active {
+                                color: #fff;
+                                background-color: @maincolor;
+                            }
+                            .left {
+                                flex: 1;
+                                border-right: 1px dashed #ccc;
+                                padding: 15px;
+                                h4 {
+                                    text-align: center;
+                                }
+                                >.row {
+                                    div {
+                                        p {
+                                            margin-bottom: 0;
+                                        }
+                                    }
+                                    div:nth-child(2n) {
+                                        p {
+                                            text-align: right;
+                                        }
+                                    }
+                                }
+                            }
+                            .right {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                width: 100px;
+                                p {
+                                    span {
+                                        font-size: 40px;
+                                    }
+                                };
+                                .tips {
+                                   
+                                    top:10px;
+                                    button {
+                                        position: absolute;
+                                        &:first-child {
+                                        border:1px solid gold;
+                                        color: pink;
+                                    }
+                                    &:last-of-type {
+                                        color: #e92322;
+                                    }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+// 新闻
+.news {
+    margin-top: 20px;
+    .container {
+        .row {
+            h4 {
+                border-bottom: 1px dashed #000;
+                padding: 15px;
+            }
+            .title {
+                .nav-tabs {
+                    li {
+                        padding-bottom: 20px;
+                        &.active {
+                                a {
+                                          background-color: @maincolor;
+                                }
+                        }
+                        a {
+                            border: none;
+                        //    background-color: @maincolor;
+                           border-radius: 50%;
+                          
+                           &:hover {
+                               background-color: @maincolor;
+                           }
+                        }
+                        i {
+                            font-size: 30px;
+                            color: #ccc;
+                            
+                        }
+                    }
+                }
+            }
+            .tab-content {
+                .tab-pane {
+                    ul {
+                        padding-left: 40px;
+                        li {
+                            a {
+                                line-height: 40px;
+                                color: #666;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.partners {
+    .container {
+        .row {
+            a {
+                display: block;
+                i {
+                    font-size: 60px;
+                &:hover{
+                    color: @maincolor;
+                }
+                }
+            }
+        }
+    }
+}

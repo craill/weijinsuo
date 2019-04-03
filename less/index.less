@@ -1,0 +1,190 @@
+// 定义微金所官方的主体色变量
+@main-color: #e92322;
+
+// bootstrap把所有a变成蓝色 需要覆盖 而且下划线使用 hover为了 focus伪类添加 使用对应伪类覆盖
+a {
+    color: #666;
+
+    &:hover {
+        color: #666;
+        text-decoration: none;
+    }
+
+    &:focus {
+        color: #666;
+        text-decoration: none;
+    }
+}
+
+
+/* 头部样式 */
+#header {
+    border-bottom: 1px solid #ccc;
+
+    // 父元素不要写死高度 做响应式布局 高度不固定的 
+    .container {
+        .row {
+
+            // 表示是行的儿子div 一定是列
+            >div {
+                line-height: 40px;
+                font-size: 12px;
+
+                // 相邻的后面的div
+                &~div {
+                    border-left: 1px solid #ccc;
+                }
+
+                .btn-link {
+                    color: #666;
+                }
+
+                .mobile-link {
+                    display: block;
+                    position: relative;
+
+                    img {
+                        // 图标不能占位置
+                        position: absolute;
+                        // 设置定位元素水平居中
+                        left: 50%;
+                        transform: translateX(-50%);
+                        top: 40px;
+                        display: none;
+                        z-index: 999;
+                    }
+
+                    // 鼠标上移显示图片
+                    &:hover {
+                        img {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 导航条区域 */
+#nav {
+    background-color: #fff;
+    // 去掉导航条底部默认间距
+    margin-bottom: 0;
+
+    .container {
+
+        // 导航条的头部
+        .navbar-header {
+
+            // 导航条的折叠按钮
+            .navbar-toggle {
+                // 80 - 34 == 46 / 2 == 23
+                margin-top: 23px;
+            }
+
+            // 品牌logo
+            .navbar-brand {
+                line-height: 50px;
+                // 因为bootstrap固定为50px 覆盖变成
+                height: 80px;
+                // 注意不要a设置字体大小里面回车换行 有大小  有间距 造成个人中心掉下来
+                // font-size: 30px;
+                .icon-icon {
+                    font-size: 30px;
+                    color: @main-color;
+                }
+
+                .icon-logo {
+                    font-size: 28px;
+                    color: #333;
+                }
+            }
+        }
+
+        // 导航条的身体
+        .navbar-collapse {
+
+            // 导航条链接的容器
+            .navbar-nav {
+
+                // 每个链接
+                li {
+                    a {
+                        // a本身上下有 15px的padding把自己变大 需要80高度 行高只能写50px
+                        line-height: 50px;
+
+                        &:hover {
+                            border-bottom: 2px solid @main-color;
+                        }
+                    }
+
+                    &.active {
+                        a {
+                            background-color: #fff;
+                            border-bottom: 2px solid @main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 轮播图区域的样式 */
+#slide {
+    .small-image {
+        /* 使用图片标签设置宽度 高度自己缩放导致图片变小 */
+        width: 100%;
+    }
+
+    /* 大图样式 */
+    .large-image {
+        /* 放大图的div容器 */
+        width: 100%;
+        height: 410px;
+        /* 使用背景图方式插入大图 */
+
+        /* 设置背景图居中 */
+        background-position: center center;
+    }
+}
+
+/* 特色介绍区域 */
+#feature {
+    padding: 40px 0;
+
+    .container {
+        .row {
+
+            // 子代列
+            >div {
+
+                // 媒体对象容器
+                .media {
+                    // 兄弟设置margin
+                    margin-bottom: 10px;
+
+                    a {
+                        &:hover {
+                            color: @main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#booking {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    // 文字有多行不推荐使用行高  使用padding
+    // line-height: 60px;
+    padding: 20px 0;
+    
+    // 修改了默认红色类名的 红色颜色
+    .text-danger {
+        color: @main-color;
+    }
+}
